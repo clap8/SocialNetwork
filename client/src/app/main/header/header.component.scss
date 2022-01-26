@@ -1,0 +1,116 @@
+$header-height: 55px;
+
+//
+// NAVBAR
+//
+.navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  background-color: var(--base-0);
+  padding: 0;
+  box-shadow: 0 2px 6px rgba(132, 145, 164, 0.12),
+    0 2px 4px rgba(132, 145, 164, 0.24);
+}
+
+.navbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+//
+// MENU
+//
+.menu {
+  display: flex;
+  align-items: center;
+  height: $header-height;
+  margin: 0 0 0 1rem;
+  padding: 0;
+}
+
+.menu li {
+  position: relative;
+  list-style-type: none;
+}
+
+.menu li a {
+  display: block;
+  font-weight: 500;
+  font-style: normal;
+  line-height: $header-height;
+  font-size: 1rem;
+  padding: 0 1vw;
+  cursor: pointer;
+  color: var(--base-5);
+
+  &:hover,
+  &.active {
+    color: var(--primary);
+  }
+}
+
+//
+// GROUP-ACTIONS
+//
+.group-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-left: solid 1px rgba(162, 162, 162, 0.5);
+  padding: 0;
+  margin: 0 0 0 1rem;
+  height: $header-height;
+}
+
+.group-actions > li {
+  list-style-type: none;
+  margin-left: 1rem;
+}
+
+.group-actions > li > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  font-weight: 400;
+  font: 0.6em "Open Sans Semibold", Arial, Tahoma, Verdana, Sans-serif;
+  text-transform: uppercase;
+  transition: color 0.25s ease-in-out;
+
+  &.active {
+    color: var(--primary);
+  }
+}
+
+.group-actions > li i {
+  margin-bottom: 0.3rem;
+  margin-right: 0;
+}
+
+.group-actions > li .annotation {
+  color: var(--primary);
+  font-size: 10px;
+}
+
+//
+// PROFILE-PIC
+//
+.profile-pic {
+  display: block;
+  margin: 0 0.6rem;
+  background-color: #eef0f5;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: $header-height - 15px;
+  height: $header-height - 15px;
+}
+
+.profile-pic:hover {
+  cursor: pointer;
+}

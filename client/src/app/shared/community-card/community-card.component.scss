@@ -1,0 +1,97 @@
+//
+// BEGIN INHERIT
+//
+.card {
+  color: var(--base-5);
+}
+
+.card-header {
+  padding: 0;
+  position: relative;
+}
+
+.card-img-top {
+  height: 150px;
+}
+
+.card-body {
+  padding: 0.5rem;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--base-5);
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+}
+
+.card-text {
+  position: relative;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  cursor: default;
+}
+
+.card-footer {
+  padding: 0;
+  border-top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--base-1-5);
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: default;
+}
+
+.card-footer i {
+  font-size: 1.2rem;
+  display: inline-block;
+  width: 20px;
+}
+//
+// END INHERIT
+//
+
+.btn-settings {
+    position:absolute;
+    bottom:0.5rem;
+    right:0.5rem;
+}
+
+.badge-cat {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.authorized-mark {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+}
+
+.actions {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.btn-join {
+  display: block;
+  width: 100%;
+}
+
+//
+// STARS
+//
+.stars i {
+  color: #c2ca10;
+  margin-right: 0;
+}
+
+.nbusers {
+  font-weight: 400;
+}

@@ -1,0 +1,186 @@
+//
+// BEGIN INHERIT
+//
+.modal-body {
+  padding: 0;
+  max-height: none;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  padding-top:30px;
+}
+
+.min-toolbar_main {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+//
+// END INHERIT
+//
+
+//
+// PRIORITY INFOS
+//
+.priority-infos {
+  position: relative;
+  padding: 0.75rem 1rem;
+  background-color: var(--primary);
+  color:#fff;
+}
+
+//
+// SIDES
+//
+.side {}
+
+.side-media {
+  position: relative;
+  max-height: 300px;
+}
+
+.side-content {
+  background-color: var(--base-0);
+  padding: 1rem;
+}
+
+.side-comments {
+  background: #eee;
+  padding-bottom: 1rem;
+}
+
+//
+// MEDIA (TOP)
+//
+.media-contributors {
+  background-color: #000;
+  height: 300px;
+  overflow: auto;
+}
+
+.media-contributors-table {
+  color:#fff;
+}
+
+.media-contributors-table a {
+    color:#fff;
+    font-weight:400;
+}
+
+.media-contributors-table td, .media-contributors-table thead th {
+    border-color:#525252;
+}
+
+.media-contributors-table thead th {
+  font-weight: 300;
+}
+
+.media-leaflet-map {
+  height: 300px;
+}
+
+//
+// TITLE
+//
+.title {
+  color: var(--base-5);
+}
+
+//
+// DESCRIPTION
+//
+.description {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+//
+// TAGS
+//
+.tags {
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.tags .words {
+  display: inline;
+}
+
+.tags .word-item {
+  font-style: italic;
+}
+
+//
+// INFO
+//
+.info {
+  display: flex;
+  flex-direction: row;
+  padding: 4px 0;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.info-user {
+  flex: 1;
+  position: relative;
+  color: var(--base-4);
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.info-user-link {
+  color: var(--base-4);
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: auto;
+  position: relative;
+}
+
+.info-user-link img {
+  width: 64px;
+  height: 64px;
+  margin-right: 5px;
+  float: left;
+}
+
+.info-user-name {
+  display: block;
+  color: var(--base-5);
+  font-size: 1rem;
+  line-height: 16px;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.info-event {
+  max-width: 70%;
+}
+
+.info-event-createdat {
+  display: block;
+  text-align: left;
+  line-height: 20px;
+}
+
+.info-event-stats {
+  text-align:right;
+  line-height: 20px;
+}
+.info-event-stats span {
+  margin-left: 1em;
+}
+
+.info-event-toolbar {
+  margin-top: 14px;
+  text-align: right;
+}
+
+.info-event-toolbar .btn-sm {
+  line-height: 20px;
+  margin-left: 0.5rem;
+}

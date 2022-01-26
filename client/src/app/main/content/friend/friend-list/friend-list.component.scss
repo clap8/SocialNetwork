@@ -1,0 +1,54 @@
+#page-friend-list {}
+
+.FriendItem {
+    padding:1rem;
+}
+
+.FriendItem.not-accepted {
+    pointer-events: none;
+}
+
+.FriendItem.not-accepted::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    pointer-events: none;
+    opacity:0.5;
+    background-color:var(--base-0);
+}
+
+.FriendItem-status {
+    margin-right:1rem;
+    color:var(--grey-300);
+    cursor:default;
+    
+    &.online {
+        color:var(--green-300);
+    }
+}
+
+.FriendItem-image {
+    img {
+        width:64px;
+    }
+}
+
+.FriendItem .item-content {
+    color: var(--base-5);
+    flex: 12 1 auto;
+    padding: 0 0.5rem;
+    height: 64px;
+}
+
+.FriendItem-name {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.FriendItem-description {
+    font-size:0.8rem;
+    margin-bottom:0.5rem;
+}

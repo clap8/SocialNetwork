@@ -1,0 +1,31 @@
+<div class="toolbar">
+  <div class="container">
+    <div class="toolbar-inner">
+      <ul class="nav nav_menu">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">#general</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">#j-pop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">#k-pop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">#vlog</a>
+        </li>
+      </ul>
+
+      <div class="fill"></div>
+      <button type="button" class="btn btn-primary" (click)="openModalCreatePost()">Créer un poste</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <ngx-masonry class="masonry-grid" [options]="myOptions" [useImagesLoaded]="true">
+    <ngxMasonryItem class="masonry-item col-3" *ngFor="let item of masonryItems">
+      <app-community-card-post></app-community-card-post>
+    </ngxMasonryItem>
+  </ngx-masonry>
+</div>

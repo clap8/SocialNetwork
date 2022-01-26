@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="card-header">
+    <img class="card-img-top" src="/assets/medias/community_background_sample.jpg">
+    <!-- <a href="#" class="btn btn-sm btn-light btn-settings"><i class="material-icons">settings</i>Gérer la communauté</a> -->
+    <span class="badge badge-cat">Musique</span>
+    <img class="authorized-mark" src="/assets/images/icon-authorized.png">
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title"><a class="card-title" [routerLink]="['/community-page']">100% J-POP</a></h5>
+    <span class="card-subtitle text-muted">@brive-jpop</span>
+
+    <div class="card-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      incididunt ut labore...
+    </div>
+
+    <div class="actions" *ngIf="hasJoined == false">
+      <button class="btn btn-light btn-join">Rejoindre</button>
+      <!-- <button class="btn btn-light btn-join">Faire une demande</button> -->
+      <!-- <button class="btn btn-light btn-join">Gérer</button> -->
+      <i>à Brive-la-gaillarde</i>
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <div class="stars">
+      <i class="material-icons">star_rate</i>
+      <i class="material-icons">star_rate</i>
+      <i class="material-icons">star_rate</i>
+    </div>
+    <div class="nbusers">
+      <i class="material-icons">group</i>
+      <span class="value">20 / ~</span>
+    </div>
+  </div>
+</div>

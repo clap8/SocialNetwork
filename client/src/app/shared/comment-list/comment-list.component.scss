@@ -1,0 +1,83 @@
+//
+// COMMENT EDITOR
+//
+.comment-editor {
+  margin-bottom: 1rem;
+  background-color: var(--base-1);
+}
+
+.comment-editor .btn {
+  text-align: center;
+  text-align: center;
+  display: block;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-top: 0;
+  background-color: var(--base-1);
+  &:hover {
+    background-color: var(--base-2);
+  }
+}
+
+.comment-list {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+//
+// COMMENT
+//
+.comment {
+  display: block;
+}
+
+.comment img {
+  width: 24px;
+  float: left;
+}
+
+.comment-body {
+  margin-left: 32px;
+}
+
+.comment-user {
+  font-size: 0.8rem;
+  line-height: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.comment-user > * + * {
+  margin-left: 0.5rem;
+}
+
+.comment-user-name, .comment-user-name:hover {
+  color: var(--base-5);
+  font-weight: 400;
+}
+
+.comment-actions {
+  text-align: right;
+}
+
+.comment-actions .btn {
+  margin-left: 0.5rem;
+}
+
+
+//
+// WITHOUT BORDER MODIFIER
+//
+.without-border .ql-toolbar.ql-snow {
+  border-left: 0;
+  border-right: 0;
+}
+
+.without-border .ql-container.ql-snow {
+  border-left: 0;
+  border-right: 0;
+}
+
+.without-border .btn-send {
+  border-left: 0;
+  border-right: 0;
+}

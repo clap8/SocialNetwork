@@ -1,0 +1,89 @@
+<div class="modal-body">
+  <div class="media-wrapper-fullscreen">
+    <!-- <img class="image" width="300px" src="/assets/medias/post_img.jpg"> -->
+  </div>
+
+  <div class="min-toolbar min-toolbar_main">
+    <div class="fill"></div>
+    <a class="btn btn-sm float-right" (click)="bsModalRef.hide()"><i class="material-icons">close</i> Fermer</a>
+  </div>
+
+  <div class="side side-media">
+    <div class="media-wrapper">
+      <img class="image" width="300px" src="/assets/medias/post_img.jpg">
+    </div>
+    <div class="min-toolbar min-toolbar_media">
+      <a class="btn btn-sm"><i class="material-icons">cloud_download</i> Télécharger</a>
+      <div class="fill"></div>
+      <a class="btn btn-sm"><i class="material-icons">fullscreen</i> Plein écran</a>
+    </div>
+  </div>
+
+  <div class="side side-content">
+    <div class="info">
+      <div class="info-user text-truncate">
+        <a class="info-user-link" href="#">
+          <img src="//d1uzk9o9cg136f.cloudfront.net/f/16777218/avatar/2012/09/05/16777742/e2acc7b9199fea0142aa61f48ce4f5e3a185a5e5_normal.jpg">
+          <span class="info-user-name">AntiLoxy</span>
+          <span class="info-post-createdat text-muted">Poster sur <b>@brive-jpop</b> le <br> 2012/10/26 à 18:00</span>
+        </a>
+      </div>
+      <div class="info-post text-truncate">
+        <div class="info-post-stats">
+          <span class="info-post-stats-likes">
+            <span>1099</span> vues
+          </span>
+          <span class="info-post-stats-comments">
+            <span>144</span> commentaires
+          </span>
+        </div>
+        <div class="info-post-toolbar">
+          <a href="#" class="btn btn-sm btn-primary"><i class="material-icons">favorite_border</i>Ajouter aux favoris</a>
+          <a href="#" class="btn btn-sm btn-light"><i class="material-icons">thumb_up</i>399</a>
+          <a href="#" class="btn btn-sm btn-light"><i class="material-icons">add_alert</i>Alerte</a>
+        </div>
+      </div>
+    </div>
+    <h3 class="title">Lorem ipsum</h3>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+      qui officia deserunt mollit anim id est laborum.
+    </p>
+    <div class="tags">
+      <span>badges : </span>
+      <ul class="words">
+        <li class="word-item">
+          <a class="word-link" href="#">tennis debutant</a>
+        </li>
+        <li class="word-item">
+          <a class="word-link" href="#">c++</a>
+        </li>
+        <li class="word-item">
+          <a class="word-link" href="#">javascript</a>
+        </li>
+        <li class="word-item">
+          <a class="word-link" href="#">mécanique ancienne</a>
+        </li>
+        <li class="word-item">
+          <a class="word-link" href="#">club de carte</a>
+        </li>
+        <li class="word-item">
+          <a class="word-link" href="#">jeu société</a>
+        </li>
+        <li class="word-item">
+          <a class="word-link" href="#">naheulbeuk</a>
+        </li>
+        <li class="word-item">
+          <a class="word-link" href="#">moto cross</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="side side-comments">
+    <app-comment-list [bordered]="false"></app-comment-list>
+  </div>
+</div>

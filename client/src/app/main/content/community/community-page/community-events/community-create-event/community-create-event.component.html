@@ -1,0 +1,30 @@
+<div class="modal-header">
+  <h3 class="modal-title" id="exampleModalLabel">Nouveau poste</h3>
+  <button type="button" class="close" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form>
+    <div class="form-group">
+      <label for="input-title" class="col-form-label">Titre:</label>
+      <input type="text" class="form-control" id="input-title">
+    </div>
+    <div class="form-group">
+      <label for="message-text" class="col-form-label">Description:</label>
+      <quill-editor></quill-editor>
+    </div>
+    <div class="form-group">
+      <label for="exampleSelect1">Type</label>
+      <select class="form-control" id="exampleSelect1">
+        <option>Image</option>
+        <option>Vidéo</option>
+        <option>Lien</option>
+      </select>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="bsModalRef.hide()">Annuler</button>
+  <button type="button" class="btn btn-primary">Envoyer</button>
+</div>

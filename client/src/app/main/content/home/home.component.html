@@ -1,0 +1,128 @@
+<div id="page-home">
+    <header class="masthead text-center text-white">
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+        <div class="masthead-content">
+            <div class="container">
+                <h1 class="masthead-heading">GO IRL</h1>
+                <h2 class="masthead-subheading">Créateur de lien social</h2>
+
+                <div class="masthead-welcome-btns">
+                    <a [routerLink]="['/login']" type="button" class="btn btn-primary masthead-welcome-btn">Connexion</a>
+                    <a [routerLink]="['/register']" type="button" class="btn btn-secondary masthead-welcome-btn">Inscription</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section_theme">
+        <h2>
+            Quelles communautés souhaitez-vous créer ou rejoindre ?
+        </h2>
+        <div class="container">
+            <ul class="row list-unstyled">
+                <li class="col-3">
+                    <a class="card card_theme">
+                        <img class="card-img-top" src="/assets/images/home-pics/bar.png" alt="Card image cap">
+                        <div class="card-body bg-red-400">
+                            <p class="card-text">Sorties nocturne</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-3">
+                    <a class="card card_theme">
+                        <img class="card-img-top" src="/assets/images/home-pics/cuisine.png" alt="Card image cap">
+                        <div class="card-body bg-orange-400">
+                            <p class="card-text">Cuisine</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-3">
+                    <a class="card card_theme">
+                        <img class="card-img-top" src="/assets/images/home-pics/tennis.png" alt="Card image cap">
+                        <div class="card-body bg-green-400">
+                            <p class="card-text">Tennis</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-3">
+                    <a class="card card_theme">
+                        <img class="card-img-top" src="/assets/images/home-pics/computer.png" alt="Card image cap">
+                        <div class="card-body bg-pink-400">
+                            <p class="card-text">Informatique</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section_communication">
+        <h2>
+            Une fois membre d'une communauté, vous pourrez
+        </h2>
+        <div class="container">
+            <ul class="row list-unstyled">
+                <li class="col-4">
+                    <div class="postit postit_communication">
+                        <h3 class="postit-title">Echanger</h3>
+                        <p class="postit-desc">Help young people learn to code and build your own skills
+                            by volunteering at one of our clubs.
+                        </p>
+                    </div>
+                </li>
+                <li class="col-4">
+                    <div class="postit postit_communication">
+                        <h3 class="postit-title">Rencontrer</h3>
+                        <p class="postit-desc">Help young people learn to code and build your own skills
+                            by volunteering at one of our clubs.
+                        </p>
+                    </div>
+                </li>
+                <li class="col-4">
+                    <div class="postit postit_communication">
+                        <h3 class="postit-title">Proposer</h3>
+                        <p class="postit-desc">Help young people learn to code and build your own skills
+                            by volunteering at one of our clubs.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section_find">
+        <h2>
+            Trouve une communauté
+        </h2>
+        <div class="container">
+            <ul class="row list-unstyled">
+                <li class="col-3">
+                    <app-community-card hasDescription="false"></app-community-card>
+                </li>
+                <li class="col-3">
+                    <app-community-card hasDescription="false"></app-community-card>
+                </li>
+                <li class="col-3">
+                    <app-community-card hasDescription="false"></app-community-card>
+                </li>
+                <li class="col-3">
+                    <app-community-card hasDescription="false"></app-community-card>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <a class="section_findmore" href="#">
+        <div class="container">
+            <span class="text">Trouve plus de communautés dans la section de recherche</span>
+            <div>
+                <a href="#" class="badge badge-cat bg-green-400">Cuisine</a>
+                <a href="#" class="badge badge-cat bg-red-400">Sortie nocturne</a>
+                <a href="#" class="badge badge-cat bg-pink-400">Tennis</a>
+                <a href="#" class="badge badge-cat bg-purple-400">Informatique</a>
+            </div>
+        </div>
+    </a>
+</div>

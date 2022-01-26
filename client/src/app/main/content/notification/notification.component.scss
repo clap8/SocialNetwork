@@ -1,0 +1,19 @@
+#page-notification {}
+
+.NotificationItem-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.NotificationItem-body {
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.NotificationItem-date {
+  font-size: 80%;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}

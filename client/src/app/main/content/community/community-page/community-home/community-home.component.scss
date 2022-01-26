@@ -1,0 +1,44 @@
+#page-community-home {
+  padding-bottom:5rem;
+}
+
+angular-tag-cloud {
+  z-index: 10;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  z-index:1;
+  overflow: hidden;
+}
+
+.clouds {
+  width: 200x;
+  height: 300px;
+  position: absolute;
+}
+
+.cloud1 {
+  top: 80px;
+  z-index: 100;
+  fill: #fff;
+  animation: move 30s linear infinite;
+}
+
+.cloud2 {
+  top: 240px;
+  z-index: 200;
+  fill: #fff;
+  animation: move 35s linear 10s infinite backwards;
+}
+
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: translateX(-400px);
+  }
+  to {
+    -webkit-transform: translateX(2350px);
+  }
+}

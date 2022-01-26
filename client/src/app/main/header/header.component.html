@@ -1,0 +1,60 @@
+<header>
+
+  <!-- NAVBAR DESKTOP -->
+  <div class="navbar">
+    <div class="container">
+      <div class="navbar-wrapper">
+        <a class="brand" routerLink="/dashboard">
+          <span class="brand-left">GO</span>
+          <span class="brand-right">IRL</span>
+        </a>
+
+        <ul class="menu">
+          <li *ngFor="let item of menu">
+            <a routerLink="{{ item.href }}" routerLinkActive="active">{{ item.name }}</a>
+          </li>
+        </ul>
+
+        <div class="col"></div>
+
+        <!-- <ul class="menu d-flex align-items-center">
+          <li>
+            <a class="item-red">S'inscrire</a>
+          </li>
+          <li>
+            <a class="item-green color-blue">Se connecter</a>
+          </li>
+        </ul> -->
+
+        <ul class="group-actions">
+          <li *ngFor="let item of actions">
+            <a routerLink="{{ item.href }}" routerLinkActive="active">
+              <i class="material-icons">{{ item.icon }}</i>
+              <span class="text">{{ item.name }} <span *ngIf="item.annotation" class="annotation">({{ item.annotation }})</span></span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="group-actions">
+          <li>
+            <div class="btn-group" dropdown>
+              <div class="profile-pic" id="button-basic" dropdownToggle style="background-image: url(https://iliuspicda-a.akamaihd.net/photo/enR0WlZeWX5ZW1VeYwUKVQRARzRsZXtQZCIaQQd4VUdfN0ETeH4LWg--/);"></div>
+              <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu"
+                aria-labelledby="button-basic">
+                <li role="menuitem"><a class="dropdown-item" routerLink="/settings/account">Paramètres</a></li>
+                <li role="menuitem"><a class="dropdown-item" href="#">Déconnexion</a></li>
+                <li class="divider dropdown-divider"></li>
+                <li role="menuitem"><a class="dropdown-item" href="#">Mode nuit</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+  <!-- NAVBAR DESKTOP -->
+
+</header>

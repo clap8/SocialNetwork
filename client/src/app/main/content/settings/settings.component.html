@@ -1,0 +1,26 @@
+<div id="page-settings">
+  <div class="container">
+    <div class="main">
+      <div class="main-header">
+        <div class="main-header-inner">
+          <h2 class="main-header-title">Paramètres</h2>
+          <p class="main-header-subtitle">Gèrer vos paramètres utilisateurs et systèmes</p>
+        </div>
+      </div>
+      <div class="tiles">
+        <div class="tiles-item col-3">
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action" [routerLink]="['account']" routerLinkActive="active">Mon
+              compte</a>
+            <a href="#" class="list-group-item list-group-item-action" [routerLink]="['password']" routerLinkActive="active">Mot
+              de passe</a>
+            <a href="#" class="list-group-item list-group-item-action" [routerLink]="['notification']" routerLinkActive="active">Notification</a>
+          </div>
+        </div>
+        <div class="tiles-item col-9">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

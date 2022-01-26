@@ -1,0 +1,133 @@
+#page-community-page {
+    padding-top:0;
+    min-height:auto;
+}
+
+.btn-join {
+    display: block;
+    margin-bottom: 0.5rem;
+    min-width: 200px;
+}
+
+//
+// COVER
+//
+.cover {
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    position: relative;
+    text-align: center;
+    z-index: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.cover img {
+    display: block;
+}
+
+.cover-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.cover-mask img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    pointer-events:none;
+}
+
+.cover-text-wrap {
+    text-align: left;
+}
+
+.cover-text-container {
+    margin: 0 auto;
+    width: 700px;
+    max-width: 80%;
+    display: block;
+}
+
+.cover-title {
+    display:block;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color:#fff;
+}
+
+.cover-title:hover {
+    color:#fff;
+}
+
+.cover-info {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.cover-info-slug {
+    display: block;
+    font-weight: 500;
+}
+
+.cover-info-location {
+    font-style:italic;
+}
+
+.cover-description {
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    font-size: 14px;
+    line-height: 18px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.cover-authorized-mark {
+    position: absolute;
+    bottom:1rem;
+    left: 1rem;
+}
+
+.cover-menu {
+    list-style: none;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    border-top: 1px solid #888;
+    border-top-color: rgba(255, 255, 255, 0.5);
+    padding-top: 1rem;
+}
+
+.cover-menu .nav-link {
+    line-height: 1.5;
+    border-radius: .5rem;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem 0 0;
+    padding: .1rem .4rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.cover-menu .nav-link.active {
+    background-color:transparent;
+}
+
+.cover-join-us {
+    display: block;
+    padding: 1rem 0 0;
+    text-align: center;
+    border-top: 1px solid #888;
+    border-top-color: rgba(255, 255, 255, 0.5);
+}

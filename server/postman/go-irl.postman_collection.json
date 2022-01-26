@@ -1,0 +1,826 @@
+{
+	"info": {
+		"_postman_id": "5eae163d-aee7-45bf-9a51-685a2a8ec1d7",
+		"name": "go-irl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Create user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "16e65595-d67e-4404-a90a-17700e3cbc71",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Your test name\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.username).to.eql(\"john\");",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"john\",\n    \"password\": \"monmotdepasse\",\n    \"email\": \"monadressemail@lol\",\n    \"sex\": \"M\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all users",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6647fbc9-05bd-49e9-9781-9f604e8a6911",
+										"exec": [
+											"var jsonData = {};",
+											"",
+											"pm.test(\"Number of users\", function () {",
+											"    jsonData = pm.response.json();",
+											"    pm.expect(jsonData.docs.length).to.eql(2);",
+											"});",
+											"",
+											"pm.environment.set(\"last_user_id\", jsonData.docs[0]._id);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get one user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "70ab2c24-226a-4bd2-b3ca-5a52ec166f68",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"var jsonData;",
+											"",
+											"pm.test(\"Result length\", function () {",
+											"    jsonData = pm.response.json();",
+											"    pm.expect(jsonData.username).to.equal(\"user1\");",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/users/{{last_user_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"{{last_user_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4c31770c-dcfa-4cd4-8290-82e9cf39a1a6",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"var jsonData;",
+											"",
+											"pm.test(\"Result length\", function () {",
+											"    jsonData = pm.response.json();",
+											"    pm.expect(jsonData.username).to.equal(\"jay\");",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "0316e5b4-ec24-4055-a7d6-522066f1e2fd",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"jay\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/users/{{last_user_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"{{last_user_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6d48f9a1-24ca-42b2-ae28-c8fa8bacf910",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/users/{{last_user_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"{{last_user_id}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0ac9d07a-56c5-4321-8de9-bdde466a890e",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "85b7201f-2e27-4bc0-a2d3-48a50b840912",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "80d88922-717a-44da-ab6b-3d71ac374649",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Registration data return back\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.username).to.eql(\"david\");",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"david\",\n    \"password\": \"monmotdepasse\",\n    \"passwordConfirm\": \"monmotdepasse\",\n    \"email\": \"david@lol.com\",\n    \"birthYear\":1900,\n    \"sex\": \"M\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/auth/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login as david user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "37118e67-b42b-4ca0-9c26-bd0caf1f9392",
+										"exec": [
+											"var data = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"token\", data.token);",
+											"",
+											"pm.test(\"Token exist\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.token).to.be;",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"david@lol.com\",\n\t\"password\": \"monmotdepasse\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/auth/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login as admin",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"admin@email.fr\",\n\t\"password\": \"monmotdepasse\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/auth/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Forgot password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"david@lol.com\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/auth/forgot",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"forgot"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reset password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/users/reset/$2a$08$sNcE7vZWqJiVS2JpDzQN4.BwjuyUmDKXeejYO4DQtTWHZR6Bj2teS",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"reset",
+										"$2a$08$sNcE7vZWqJiVS2JpDzQN4.BwjuyUmDKXeejYO4DQtTWHZR6Bj2teS"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Me",
+					"item": [
+						{
+							"name": "Get",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "e5cae194-3961-4a35-8e9a-b96858da048a",
+										"exec": [
+											"pm.test(\"Get my username\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.username).to.eq(\"david\");",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/me",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update profile",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"firstName\": \"jay\",\n\t\"lastName\": \"nop\",\n\t\"username\": \"antiloxy\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/me",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"currentPassword\": \"monmotdepasse\",\n\t\"newPassword\": \"test\",\n\t\"newPasswordConfirm\": \"test\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/users/me/password",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"me",
+										"password"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "cd232a7b-aa8f-4b2f-a3ce-eb64b77d7039",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "f678bca9-b5e2-4854-9236-82c2a2f03718",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Article",
+			"item": [
+				{
+					"name": "Create article",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "16e65595-d67e-4404-a90a-17700e3cbc71",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Your test name\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.username).to.eql(\"john\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Mon premier article\",\n    \"text\": \"Ceci est juste un test\",\n    \"imageURL\": \"/images/test.jpg\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/articles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all articles",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6647fbc9-05bd-49e9-9781-9f604e8a6911",
+								"exec": [
+									"var jsonData = {};",
+									"",
+									"pm.test(\"Number of users\", function () {",
+									"    jsonData = pm.response.json();",
+									"    pm.expect(jsonData.docs.length).to.eql(2);",
+									"});",
+									"",
+									"pm.environment.set(\"last_article_id\", jsonData.docs[0]._id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/articles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one article",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "70ab2c24-226a-4bd2-b3ca-5a52ec166f68",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"var jsonData;",
+									"",
+									"pm.test(\"Result length\", function () {",
+									"    jsonData = pm.response.json();",
+									"    pm.expect(jsonData.username).to.equal(\"user1\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/articles/{{last_article_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"articles",
+								"{{last_article_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update article",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4c31770c-dcfa-4cd4-8290-82e9cf39a1a6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"var jsonData;",
+									"",
+									"pm.test(\"Result length\", function () {",
+									"    jsonData = pm.response.json();",
+									"    pm.expect(jsonData.username).to.equal(\"jay\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0316e5b4-ec24-4055-a7d6-522066f1e2fd",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Mon premier article modifié\",\n\t\"text\": \"Ceci est juste un test\",\n    \"imageURL\": \"/images/test.jpg\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/articles/{{last_article_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"articles",
+								"{{last_article_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/health-check",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"health-check"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

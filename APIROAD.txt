@@ -1,0 +1,57 @@
+/users/login
+/users/register
+/users/forgot
+/users/reset/:token
+
+GET  /users/me
+PUT  /users/me
+POST /users/me/change-password
+POST /users/me/change-picture
+
+/users/list
+/users/create
+/users/show/:userId
+/users/update/:userId
+
+------------------------------------------------------------------------------------
+ USERS
+------------------------------------------------------------------------------------
+GET     /users/me/posts
+GET     /users/me/events
+
+------------------------------------------------------------------------------------
+ COMMUNITIES
+------------------------------------------------------------------------------------
+GET     /communities [geozone?, tags?, name?, theme?]
+POST    /communities
+PUT     /communities/:id
+DELETE  /communities/:id
+POST    /communities/:id/join
+DELETE  /communities/:id/unjoin
+
+GET     /communities/:id/members
+GET     /communities/:id/posts
+POST    /communities/:id/posts
+GET     /communities/:id/posts/:id
+PUT     /communities/:id/posts/:id
+DELETE  /communities/:id/posts/:id
+
+GET     /communities/:id/events
+POST    /communities/:id/events
+GET     /communities/:id/events/:id
+PUT     /events/:id
+DELETE  /events/:id
+POST    /events/:id/join
+DELETE  /events/:id/unjoin
+
+------------------------------------------------------------------------------------
+ COMMENTS
+------------------------------------------------------------------------------------
+POST    /comments/ [model, object_id]
+PUT     /comments/:id
+DELETE  /comments/:id
+
+------------------------------------------------------------------------------------
+ NOTIFICATIONS
+------------------------------------------------------------------------------------
+GET    /notifications/

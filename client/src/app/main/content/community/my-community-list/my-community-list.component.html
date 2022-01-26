@@ -1,0 +1,31 @@
+<div id="page-my-community-list">
+
+  <div class="toolbar">
+    <div class="container">
+      <div class="toolbar-inner">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Toutes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Rejointes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Crées</a>
+          </li>
+        </ul>
+        <div class="fill"></div>
+        <button type="button" class="btn btn-primary">Créer une communauté</button>
+        <button [routerLink]="['/community-list']" type="button" class="btn btn-secondary">Rejoindre une communauté</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <ngx-masonry class="masonry-grid" [options]="myOptions" [useImagesLoaded]="true">
+      <ngxMasonryItem class="masonry-item col-3" *ngFor="let item of masonryItems">
+        <app-community-card hasJoined="true"></app-community-card>
+      </ngxMasonryItem>
+    </ngx-masonry>
+  </div>
+</div>

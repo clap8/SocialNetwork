@@ -1,0 +1,17 @@
+.list-group-item {
+    padding: 1rem 0;
+    line-height: 1rem;
+
+    &:first-of-type {
+        padding-top:0;
+    }
+}
+
+.list-group_activities .list-group-item {
+    padding: 0.5rem 0;
+    border-color: #ff00984f;
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+}

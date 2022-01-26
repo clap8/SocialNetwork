@@ -1,0 +1,217 @@
+#page-home {
+    margin-top: -55px;
+}
+
+.postit {
+    padding: 2rem;
+    color: #fff;
+}
+
+.postit-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align:center;
+}
+
+.postit-desc {
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+
+.badge-cat {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    &:hover {
+        color:#fff;
+    }
+}
+
+section {
+    background: transparent;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+section h2 {
+    font-size:2rem;
+    line-height:1;
+    margin: 0;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+}
+
+section ul {
+    margin-bottom: 0;
+}
+
+//
+// MASTHEAD
+//
+$primary: #ee0979 !default;
+$secondary: #ff6a00 !default;
+.masthead {
+    position: relative;
+    overflow: hidden;
+    padding-top: 9rem;
+    padding-bottom: 3rem;
+    background: linear-gradient(0deg, $secondary 0%, $primary 100%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.masthead-content {
+    z-index: 1;
+    position: relative;
+}
+
+.masthead-heading {
+    font-size: 6rem;
+    font-weight:600;
+    line-height: 1;
+    margin-bottom:2rem;
+    color:#fff;
+}
+.masthead-subheading {
+    font-size: 4rem;
+    line-height: 1;
+    color:#fff;
+    margin-bottom:7rem;
+}
+
+.masthead-welcome-btn {
+    margin-right: 2rem;
+    font-weight:500;
+}
+
+.bg-circle {
+    z-index: 0;
+    position: absolute;
+    border-radius: 100%;
+    background: linear-gradient(0deg, $primary 0%, $secondary 100%);
+}
+
+.bg-circle-1 {
+    height: 90rem;
+    width: 90rem;
+    bottom: -55rem;
+    left: -55rem;
+}
+
+.bg-circle-2 {
+    height: 50rem;
+    width: 50rem;
+    top: -25rem;
+    right: -25rem;
+}
+
+.bg-circle-3 {
+    height: 20rem;
+    width: 20rem;
+    bottom: -10rem;
+    right: 5%;
+}
+
+.bg-circle-4 {
+    height: 30rem;
+    width: 30rem;
+    top: -5rem;
+    right: 35%;
+}
+
+// @media (min-width: 992px) {
+//     header.masthead {
+//         padding-top: calc(10rem + 55px);
+//         padding-bottom: 10rem;
+//         .masthead-content {
+//             .masthead-heading {
+//                 font-size: 6rem;
+//             }
+//             .masthead-subheading {
+//                 font-size: 4rem;
+//             }
+//         }
+//     }
+// }
+
+//
+// SECTION THEME
+//
+.section_theme {
+    background-color: var(--gray-dark);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+}
+
+.card_theme {
+    display: block;
+    background-color: #fff;
+    overflow: hidden;
+    width: 100%;
+    cursor: default;
+    text-decoration: none;
+}
+
+.card_theme .card-body {
+    padding: 0.6rem;
+    text-align: center;
+}
+
+.card_theme .card-text {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+//
+// SECTION COMMUNICATION
+//
+.section_communication {
+    background-color: var(--purple-400);
+}
+
+.postit_communication {
+    cursor: default;
+    background-color: var(--purple-600);
+}
+
+//
+// SECTION FIND
+//
+.section_find {
+    background-color: var(--orange-400);
+}
+
+//
+// SECTION FINDMORE
+//
+.section_findmore {
+    display: block;
+    background-color: var(--orange-600);
+    color: #fff;
+    font-weight: 500;
+    padding: 2rem;
+    text-align: center;
+}
+
+.section_findmore .text {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+//
+// THEME--DARK
+//
+:host-context(.theme--dark) {
+    .intro {
+        color: var(--base-5);
+    }
+}
+

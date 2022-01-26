@@ -1,0 +1,66 @@
+#page-community-list {
+    padding-top:0;
+}
+
+//
+// SEARCH BANNER
+//
+.search-banner {
+    background-color: var(--primary);
+    padding:16px 0;
+}
+
+//
+// SEARCH BANNER TOP
+//
+.search-banner-top {
+    display:flex;
+    flex-direction: row;
+    cursor:pointer;
+}
+
+.search-banner-top-title {
+    flex:1;
+    margin-bottom:0;
+    color: #fff;
+    font-size: 27px;
+    font-weight: bold;    
+    padding: 0;
+    line-height: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &::placeholder {
+        color:#ffb5e1
+    }
+}
+
+.search-banner-top-expand-icon {
+    font-size: 32px;
+    color:#fff;
+    transition:transform 0.4s ease;
+}
+
+.in .search-banner-top-expand-icon {
+    transform:rotate(-180deg);    
+}
+
+//
+// SEARCH BANNER MENU
+//
+.search-banner-menu {
+    height: 100px;
+    margin-top:1rem;
+}
+
+.search-banner-menu label {
+    margin-right:1rem;
+    color:#fff;
+    margin-bottom:0;
+}
+
+.search-banner-menu .ng-select.ng-select-single .ng-select-container,
+.search-banner-menu .form-control {
+    height: 38px;
+}

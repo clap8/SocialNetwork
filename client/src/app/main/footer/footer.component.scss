@@ -1,0 +1,29 @@
+#footer {
+  padding-top:2rem;
+  padding-bottom:2rem;
+}
+
+.container {
+  max-width:600px;
+}
+
+.menu {
+  text-align:center;
+  margin:0;
+  padding:0;
+}
+
+.menu-item {
+  display: inline;
+  font-size: 12px;
+  padding-right: 8px;
+}
+
+.menu-item, .menu-link {
+  color: #657786;
+  font-weight: 400;
+}
+
+.menu-link:hover {
+  color:var(--primary);
+}

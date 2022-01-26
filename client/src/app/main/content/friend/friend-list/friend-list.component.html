@@ -1,0 +1,82 @@
+<div id="page-friend-list">
+  <div class="container">
+
+    <div class="main">
+      <div class="main-header">
+        <div class="main-header-inner">
+          <h2 class="main-header-title">Liste d'amis</h2>
+          <p class="main-header-subtitle">Gérer votre liste d'amis</p>
+        </div>
+      </div>
+
+      <!-- SECTION LISTE D'AMIS -->
+      <div class="main-section">
+        <div class="toolbar mb-0">
+          <div class="toolbar-inner">
+            <ul class="nav nav_menu">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Tous</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">En ligne (1)</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Hors ligne (0)</a>
+              </li>
+            </ul>
+
+            <div class="fill"></div>
+            <ng-select class="fill" placeholder="Filtrer par nom"></ng-select>
+            <button type="button" class="btn btn-primary">Ajouter un ami</button>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="item FriendItem not-accepted">
+            <div class="FriendItem-status">
+              <i class="material-icons">brightness_1</i>
+            </div>
+            <a class="FriendItem-image" href="#"><img class="image" src="//d1uzk9o9cg136f.cloudfront.net/f/16777218/avatar/2012/09/05/16777742/e2acc7b9199fea0142aa61f48ce4f5e3a185a5e5_normal.jpg"></a>
+            <div class="item-content">
+              <span class="FriendItem-name">Mark</span> <span> (en cours d'acceptation)</span>
+              <p class="FriendItem-description text-muted">Lorem ipsum dolores etc.........</p>
+            </div>
+            <div class="item-last">
+              <div class="btn-group" dropdown>
+                <a class="is-action" id="button-basic" dropdownToggle><i class="material-icons">more_vert</i></a>
+                <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu"
+                  aria-labelledby="button-basic">
+                  <li role="menuitem"><a class="dropdown-item" href="#">Envoyer un message</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Supprimer</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="item FriendItem">
+            <div class="FriendItem-status">
+              <i class="material-icons">brightness_1</i>
+            </div>
+            <a class="FriendItem-image" href="#"><img class="image" src="//d1uzk9o9cg136f.cloudfront.net/f/16777218/avatar/2012/09/05/16777742/e2acc7b9199fea0142aa61f48ce4f5e3a185a5e5_normal.jpg"></a>
+            <div class="item-content">
+              <span class="FriendItem-name">Mark</span>
+              <p class="FriendItem-description text-muted">Lorem ipsum dolores etc.........</p>
+            </div>
+            <div class="item-last">
+              <div class="btn-group" dropdown>
+                <a class="is-action" id="button-basic" dropdownToggle><i class="material-icons">more_vert</i></a>
+                <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu"
+                  aria-labelledby="button-basic">
+                  <li role="menuitem"><a class="dropdown-item" href="#">Envoyer un message</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Supprimer</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SECTION LISTE D'AMIS -->
+
+    </div>
+  </div>
+</div>

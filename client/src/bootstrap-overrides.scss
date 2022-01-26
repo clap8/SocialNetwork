@@ -1,0 +1,83 @@
+.btn-sm {
+  font-size: 0.7rem;
+  i {
+    font-size: 17px;
+    line-height: 12px;
+  }
+}
+
+.form-control {
+  border: 0;
+}
+
+.card {
+  border: 0;
+}
+
+.nav-link {
+  cursor:pointer;
+}
+
+.nav-link.active {
+  font-weight: 500;
+  background-color: var(--base-1-5);
+  color: var(--base-4);
+}
+
+.dropdown-menu {
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(132, 145, 164, 0.12),
+    0 2px 4px rgba(132, 145, 164, 0.24);
+}
+
+.table .thead-dark th {
+  color: var(--base-0);
+  background-color: var(--base-5);
+  border-color: var(--base-5);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(175, 29, 125, 0.29);
+}
+
+.form-control {
+  background-color: var(--base-1);
+}
+
+.form-control[type="password"] {
+  background-color: var(--yellow-200);
+}
+
+.list-group {
+  background-color: var(--base-0);
+  margin-bottom: 1rem;
+}
+
+.list-group-item {
+  padding: 0.5rem 1rem;
+}
+
+.list-group-item,
+.list-group-item.active {
+  margin-bottom: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.list-group-item:last-of-type {
+  border-bottom: 0;
+}
+
+.list-group-item:hover {
+  color: var(--base-3);
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 500;
+}
+
+.list-group-item-action:hover, .list-group-item-action:focus {
+  background-color: var(--base-0-5);
+}

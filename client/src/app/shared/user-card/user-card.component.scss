@@ -1,0 +1,53 @@
+.UserCard {
+  position: relative;
+  background-color: var(--base-0);
+  color: var(--base-5);
+}
+
+.UserCard-content {
+  display: flex;
+  flex-flow: row nowrap;
+  min-height: 100%;
+}
+
+.UserCard-image {
+  position: relative;
+  display: block;
+  width: 128px;
+}
+
+.UserCard-image img {
+  display: block;
+  height: 128px;
+  width: 128px;
+}
+
+.UserCard-info {
+  flex: 12;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.UserCard-info-user-name {
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.UserCard-info-role {
+  font-weight: 100;
+}
+
+.UserCard-info-desc {
+  font-size: 0.8rem;
+  max-height: 84px;
+  color: #888;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.5rem;
+}
+
+.UserCard-actions {
+  display: flex;
+  align-items: center;
+}

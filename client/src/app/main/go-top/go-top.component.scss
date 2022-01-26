@@ -1,0 +1,21 @@
+.scroll-top {
+    position: fixed;
+    display: block;
+    right: 30px;
+    bottom: 50px;
+    background: black;
+    background: rgba(0,0,0,0.4);
+    color:#fff;
+    padding: 2px 6px 4px 6px;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    z-index: 100;
+  }
+  
+  .scroll-top i {
+    margin:0;
+    font-size: 24px;
+    line-height: 24px;
+  }

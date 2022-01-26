@@ -1,0 +1,53 @@
+<div id="page-community-page">
+  <div class="cover" style="background-image:url('/assets/medias/community_background_sample.jpg')">
+    <div class="cover-mask">
+      <img src="/assets/images/mask-black-gradient-bottom-short.png">
+    </div>
+
+    <div class="cover-text-wrap">
+      <div class="cover-text-container">
+        <a [routerLink]="['home']" class="cover-title">100% J-POP</a>
+        <p class="cover-description">Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit
+          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa
+          qui officia deserunt mollit anim id est laborum
+        </p>
+
+        <div *ngIf="isMember == false" class="cover-join-us">
+          <button type="submit" class="btn btn-light btn-join mx-auto">Rejoindre</button>
+        </div>
+
+        <p class="cover-info">
+          <span class="cover-info-slug">@brive-jpop</span>
+          <span class="cover-info-location">à Brive-la-gaillarde 19100</span>
+        </p>
+
+        <ul *ngIf="isMember" class="nav justify-content-center cover-menu">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['me']" routerLinkActive="active">Moi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['posts']" routerLinkActive="active">Postes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['events']" routerLinkActive="active">Evènements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['members']" routerLinkActive="active">Membres</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active">Administration</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+    <img class="cover-authorized-mark" src="/assets/images/icon-authorized.png">
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
